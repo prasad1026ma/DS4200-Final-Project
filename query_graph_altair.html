@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"$schema": "https://vega.github.io/schema/vega/v5.json", "data": [{"name": "source_0", "values": [{"Google_High_end": 14.305521276262072, "Google_High_start": 0.0, "Top_Query": "Donate to Japan", "category": "Donate To", "year": 2011}, {"Google_High_end": 14.305521276262072, "Google_High_start": 0.0, "Top_Query": "Debt Ceiling", "category": "Economy", "year": 2011}, {"Google_High_end": 16.14639234161377, "Google_High_start": 0.0, "Top_Query": "Abortion", "category": "Election Issues", "year": 2012}, {"Google_High_end": 19.13777275972588, "Google_High_start": 0.0, "Top_Query": "Boston Marathon", "category": "Events", "year": 2013}, {"Google_High_end": 14.305521276262072, "Google_High_start": 0.0, "Top_Query": "Kindle Fire", "category": "Gadgets", "year": 2011}, {"Google_High_end": 14.305521276262072, "Google_High_start": 0.0, "Top_Query": "IKEA", "category": "Google Maps Searches", "year": 2011}, {"Google_High_end": 14.305521276262072, "Google_High_start": 0.0, "Top_Query": "Hurricane Irene", "category": "Google News Searches", "year": 2011}, {"Google_High_end": 11.058242464822436, "Google_High_start": 0.0, "Top_Query": "Heath Ledger", "category": "Google.com Fastest Falling", "year": 2009}, {"Google_High_end": 11.058242464822436, "Google_High_start": 0.0, "Top_Query": "Facebook", "category": "Google.com Fastest Rising", "year": 2009}, {"Google_High_end": 11.81424992640499, "Google_High_start": 0.0, "Top_Query": "Bailout", "category": "It's the Economy", "year": 2008}, {"Google_High_end": 13.55361504953696, "Google_High_start": 0.0, "Top_Query": "Borat Lawsuit", "category": "Lawsuits", "year": 2007}, {"Google_High_end": 19.13777275972588, "Google_High_start": 0.0, "Top_Query": "Boston Marathon", "category": "New York City, NY", "year": 2013}, {"Google_High_end": 11.058242464822436, "Google_High_start": 0.0, "Top_Query": "Jon and Kate", "category": "News Searches", "year": 2009}, {"Google_High_end": 14.305521276262072, "Google_High_start": 0.0, "Top_Query": "Murdoch Scandal", "category": "Political Scandals", "year": 2011}, {"Google_High_end": 14.305521276262072, "Google_High_start": 0.0, "Top_Query": "Herman Cain", "category": "Politics", "year": 2011}, {"Google_High_end": 13.55361504953696, "Google_High_start": 0.0, "Top_Query": "Fred Thompson", "category": "Presidential Campaign", "year": 2007}, {"Google_High_end": 14.305521276262072, "Google_High_start": 0.0, "Top_Query": "HP TouchPad", "category": "Product Searches", "year": 2011}, {"Google_High_end": 11.04297425574863, "Google_High_start": 0.0, "Top_Query": "Duke Lacrosse Scandal", "category": "Scandals", "year": 2006}, {"Google_High_end": 16.14639234161377, "Google_High_start": 0.0, "Top_Query": "Election 2012", "category": "Searches", "year": 2012}, {"Google_High_end": 16.14639234161377, "Google_High_start": 0.0, "Top_Query": "FB", "category": "Stocks", "year": 2012}, {"Google_High_end": 16.14639234161377, "Google_High_start": 0.0, "Top_Query": "Playstation 4", "category": "Tech Gadgets", "year": 2012}, {"Google_High_end": 14.305521276262072, "Google_High_start": 0.0, "Top_Query": "OS X Lion", "category": "Technology", "year": 2011}, {"Google_High_end": 16.14639234161377, "Google_High_start": 0.0, "Top_Query": "Barack Obama", "category": "US Politicians", "year": 2012}]}, {"name": "source_0_x_domain_category", "values": [{"category": "Donate To"}, {"category": "Economy"}, {"category": "Election Issues"}, {"category": "Events"}, {"category": "Gadgets"}, {"category": "Google Maps Searches"}, {"category": "Google News Searches"}, {"category": "Google.com Fastest Falling"}, {"category": "Google.com Fastest Rising"}, {"category": "It's the Economy"}, {"category": "Lawsuits"}, {"category": "New York City, NY"}, {"category": "News Searches"}, {"category": "Political Scandals"}, {"category": "Politics"}, {"category": "Presidential Campaign"}, {"category": "Product Searches"}, {"category": "Scandals"}, {"category": "Searches"}, {"category": "Stocks"}, {"category": "Tech Gadgets"}, {"category": "Technology"}, {"category": "US Politicians"}]}], "signals": [{"name": "x_step", "value": 20}, {"name": "width", "update": "bandspace(domain('x').length, 0.1, 0.05) * x_step"}, {"name": "param_53", "value": "2006", "bind": {"input": "radio", "options": [2011, 2012, 2013, 2009, 2008, 2007, 2006], "name": "Select Year"}}], "marks": [{"type": "rect", "name": "marks", "from": {"data": "source_0"}, "encode": {"update": {"opacity": [{"value": 1, "test": "(datum.year === param_53)"}, {"value": 0.3}], "y": {"field": "Google_High_end", "scale": "y"}, "x": {"field": "category", "scale": "x"}, "y2": {"field": "Google_High_start", "scale": "y"}, "tooltip": {"signal": "{\"Top_Query\": isValid(datum[\"Top_Query\"]) ? datum[\"Top_Query\"] : \"\"+datum[\"Top_Query\"], \"year\": format(datum[\"year\"], \"\")}"}, "fill": [{"field": "year", "scale": "color", "test": "(datum.year === param_53)"}, {"value": "lightgrey"}], "width": {"signal": "max(0.25, bandwidth('x'))"}}}, "style": ["bar"]}], "scales": [{"name": "x", "type": "band", "domain": {"data": "source_0_x_domain_category", "field": "category", "sort": true}, "range": {"step": {"signal": "x_step"}}, "paddingInner": 0.1, "paddingOuter": 0.05}, {"name": "y", "type": "linear", "domain": {"data": "source_0", "fields": ["Google_High_start", "Google_High_end"]}, "range": [{"signal": "height"}, 0], "nice": true, "zero": true}, {"name": "color", "type": "ordinal", "domain": [2011, 2012, 2013, 2009, 2008, 2007, 2006], "range": ["#1b9e77", "#d95f02", "#7570b3", "#e7298a", "#66a61e", "#a6cee3", "#8B8000"]}], "axes": [{"scale": "y", "grid": true, "maxExtent": 0, "zindex": 0, "minExtent": 0, "orient": "left", "gridScale": "x", "ticks": false, "labels": false, "aria": false, "domain": false, "tickCount": {"signal": "ceil(height/40)"}}, {"scale": "x", "labelBaseline": "middle", "orient": "bottom", "grid": false, "labelAngle": 270, "labelAlign": "right", "title": "category", "zindex": 0}, {"scale": "y", "orient": "left", "title": "Google_High", "labelOverlap": true, "tickCount": {"signal": "ceil(height/40)"}, "grid": false, "zindex": 0}], "title": {"text": "Yearly Top Search Query Categories vs. Google's Stock Highs", "frame": "group"}, "padding": 5, "height": 300, "background": "white", "style": "cell", "legends": [{"fill": "color", "symbolType": "square", "title": "year", "encode": {"symbols": {"update": {"opacity": {"value": 1}}}}}]};
+      var embedOpt = {"mode": "vega"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
