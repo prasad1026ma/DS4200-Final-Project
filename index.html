@@ -36,7 +36,10 @@
                 <li>Trends Data - This data displays the top Google searches per year, organized by category, query, and query ranking within the category. The data was extracted from kaggle (https://www.kaggle.com/datasets/dhruvildave/google-trends-dataset) and only #1 query from 2006-2013 for specific, revelant categories were used.</li>
                 <li>GDP Data - The GDP data represents the quarterly real GDP values of the United States from 2006 to 2013. The dataset was extracted from FRED Economic Data (https://fred.stlouisfed.org/series/GDPC1) GDP growth rates were calculated as the percentage change between consecutive quarters, providing insight into economic trends during the period.</li>
             </ul>
-        <h3>Data Preprocessing and Cleaning</h3>
+        <h3>Data Preprocessing and Cleaning</h3>\
+        <p>We filtered our MAANG stock datasets to capture only the years from 2006 to 2013 inclusive, representing the pre and post time of the 2008 Stock Market Crash. We started by converting the Date column to datetime, then isolating only the dates from our desired range. We then stacked the individual company dataframes and added an additional column to indicate the company that the data is coming from. We handled missing or invalid values by dropping these rows entirely, rather than utilizing imputation which may risk skewing the distribution of the data.</p>
+        
+
         
     </main>
 </body>
