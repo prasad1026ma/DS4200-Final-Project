@@ -68,15 +68,16 @@ maangstock.then(function(data) {
     // Define line generator function
     const lineGenerator = d3.line()
         .x(d => xScale(d.Date))
-        .y(d => yScale(d.value));
+        .y(d => yScale(d.value))
+        .curve(d3.curveMonotoneX);
 
     // Define companies, their colors, and line styles
     const companies = [
-        {name: 'Apple_Avg', color: 'orange', dash: '0'},      
-        {name: 'Amazon_Avg', color: 'blue', dash: '5,5'},     
-        {name: 'Microsoft_Avg', color: 'green', dash: '2,2'}, 
-        {name: 'Netflix_Avg', color: 'red', dash: '10,5,2,5'},
-        {name: 'Google_Avg', color: 'purple', dash: '3,3,1,3'}
+        {name: 'Apple_Avg', color: 'orange'},      
+        {name: 'Amazon_Avg', color: 'blue'},     
+        {name: 'Microsoft_Avg', color: 'green'}, 
+        {name: 'Netflix_Avg', color: 'red'},
+        {name: 'Google_Avg', color: 'purple'}
     ];
 
     // Draw lines for each company
@@ -86,7 +87,6 @@ maangstock.then(function(data) {
             .attr("fill", "none")
             .attr("stroke", company.color)
             .attr("stroke-width", 2)
-            .attr("stroke-dasharray", company.dash) 
             .attr("d", lineGenerator);
     });
 
@@ -108,4 +108,31 @@ maangstock.then(function(data) {
         .attr("x", 20)
         .attr("y", 15)
         .text(d => d.name.replace('_Avg', ''));
+
+    const annotations = [
+        { date: "2008-09-01", text: "Start of Crisis", yValue: 30 },
+        { date: "2011-04-13", text: "End of Crisis", yValue: 40 }
+    ];
+    
+    annotations.forEach(annotation => {
+        const x = xScale(parseDate(annotation.date));
+        const y = yScale(annotation.yValue);
+    
+            // Add a vertical line
+        svg.append("line")
+            .attr("x1", x)
+            .attr("x2", x)
+            .attr("y1", y)
+            .attr("y2", height - margin.top - margin.bottom)
+            .attr("stroke", "black")
+            .attr("stroke-dasharray", "4 4");
+    
+            // Add a text box
+        svg.append("text")
+            .attr("x", x - 32)
+            .attr("y", y - 10)
+            .attr("fill", "black")
+            .style("font-size", "9px")
+            .text(annotation.text);
+    });
 });
