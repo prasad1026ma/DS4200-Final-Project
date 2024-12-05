@@ -118,7 +118,7 @@ maangstock.then(function(data) {
         const x = xScale(parseDate(annotation.date));
         const y = yScale(annotation.yValue);
     
-            // Add a vertical line
+        // Add a vertical line
         svg.append("line")
             .attr("x1", x)
             .attr("x2", x)
@@ -127,7 +127,7 @@ maangstock.then(function(data) {
             .attr("stroke", "black")
             .attr("stroke-dasharray", "4 4");
     
-            // Add a text box
+        // Add a text box
         svg.append("text")
             .attr("x", x - 32)
             .attr("y", y - 10)
