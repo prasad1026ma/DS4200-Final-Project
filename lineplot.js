@@ -30,7 +30,6 @@ maangstock.then(function(data) {
         .append('svg')
         .attr('width', width)
         .attr('height', height)
-        .style('background', 'lightyellow')
         .append('g')
         .attr('transform', `translate(${margin.left},${margin.top})`);
 
@@ -71,13 +70,13 @@ maangstock.then(function(data) {
         .x(d => xScale(d.Date))
         .y(d => yScale(d.value));
 
-    // Define companies and their colors
+    // Define companies, their colors, and line styles
     const companies = [
-        {name: 'Apple_Avg', color: 'orange'},
-        {name: 'Amazon_Avg', color: 'blue'},
-        {name: 'Microsoft_Avg', color: 'green'},
-        {name: 'Netflix_Avg', color: 'red'},
-        {name: 'Google_Avg', color: 'purple'}
+        {name: 'Apple_Avg', color: 'orange', dash: '0'},      
+        {name: 'Amazon_Avg', color: 'blue', dash: '5,5'},     
+        {name: 'Microsoft_Avg', color: 'green', dash: '2,2'}, 
+        {name: 'Netflix_Avg', color: 'red', dash: '10,5,2,5'},
+        {name: 'Google_Avg', color: 'purple', dash: '3,3,1,3'}
     ];
 
     // Draw lines for each company
@@ -87,6 +86,7 @@ maangstock.then(function(data) {
             .attr("fill", "none")
             .attr("stroke", company.color)
             .attr("stroke-width", 2)
+            .attr("stroke-dasharray", company.dash) 
             .attr("d", lineGenerator);
     });
 
