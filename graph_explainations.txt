@@ -1,0 +1,125 @@
+Mark Abousleiman, Jiduo Chen, Maya Prasad, Olivia Yeung
+DS4200 Group 1
+December 6, 2024
+
+Visual Analysis of the 2008 Financial Crisis on MAANG Stock Trends
+    We looked heavily into the effect of the 2008 Stock Market Crash on the MAANG companies (Microsoft, Apple, Amazon, Netflix, and Google) 
+in the years surrounding the crisis. To display our analysis, we developed a webpage that showcases the visualizations we developed to 
+guide our research and communicate our findings. Here, we include five visualizations that analyze stock pricing, public sentiment and 
+web searches, and overall nation statistics during the 2006 to 2013 time period. These visualizations range from general to more specific,
+ providing an insightful look into the market as a whole during this time. 
+
+Average Daily Stock Price Per MAANG Company
+    This visualization provides an overview of daily price fluctuations in MAANG stocks from 2006 to 2013. The marks in this graph are lines, 
+each representing the stock price trend of a company over time. The channels include the x-axis position, which shows time, as well as y-axis
+position, which shows average stock prices, allowing for quantitative comparisons.  We also utilize color to differentiate companies, with 
+each line assigned a distinct color as indicated by the legend.  We chose to represent this data using a line graph because it is ideal for
+displaying continuous data, such as stock prices, over time. The continuity of the lines highlights trends, patterns, and fluctuations, 
+while the clear paths allow for comparisons across companies. Unlike bar charts or scatter plots, line graphs emphasize temporal progression
+and make it easy to track changes for multiple entities simultaneously.
+    From this graph, we can see that Microsoft, Amazon, Apple, and Google generally follow similar trends in their stock pricing, 
+while Netflix’s stock price stands out with a distinct trajectory. The year 2008 demonstrates decreasing stock prices for all companies, 
+with Microsoft and Google showing the steepest declines. Following this period, stock prices for all companies recovered post-2009, as 
+reflected in their upward trends. Netflix, in particular, exhibited exponential growth between 2010 and 2012 but experienced the largest
+drop among all companies toward the end of 2011. This decline can be attributed to an increase in subscription pricing, which caused 
+Netflix to lose many customers. Despite this, by the end of 2013, Netflix's price aligned with Microsoft's, which had maintained the most
+consistent high stock prices among the companies throughout the observed period.  
+    This visualization highlights the impact of economic events like the 2008 financial crisis and corporate decisions, such as Netflix’s 
+pricing strategy, on stock prices. By leveraging lines, positions, and colors, the line graph effectively communicates trends, fluctuations,
+and relative performance among the MAANG companies over time.
+
+Monthly Volume Distribution for Each MAANG Company
+    This visualization examines the monthly trading volume of shares for each MAANG company from 2006 to 2013. The marks in this graph are 
+stacked areas, with each area representing the trading volume of a single company. The channels used are x-axis position showing monthly
+time intervals, y-axis position showing total volume of shares traded, color to differentiate companies, and size/area height to represent
+the volume of shares, with larger areas indicating higher trading activity. A stacked area graph was chosen to represent this data because
+it is well-suited to show cumulative data, such as total trading volume over time, while also allowing for the comparison of individual
+company contributions. The stacking highlights the relative contributions of each company to the total volume and makes it easy to identify 
+dominant players like Apple.
+    Key insights from this graph include Apple's dominance in trading volume, particularly in January 2007 and October 2008, corresponding to
+periods of increased market volatility. This reflects the effects of the 2008 financial crisis, during which investors engaged in high-volume
+trading amid market instability and risk. Post-2009, the total volume generally decreases, indicating an economic recovery and reduced investor 
+urgency. Microsoft, Amazon, and Google follow similar patterns on a smaller scale, while Netflix’s trading volume does not significantly grow 
+until the 2010s, likely due to its rising popularity during that period.
+    This visualization effectively communicates the impact of economic events like the financial crisis and the differences in trading activity 
+across companies. The stacked areas provide both a cumulative view of total trading volume and insights into individual company contributions, 
+enhancing our understanding of market behavior during this time.
+
+Percentage Change in Stock Price vs Average Sentiment by Company
+    This scatter plot visualizes the relationship between the percentage change in stock price and average sentiment score derived from daily 
+financial headlines for major MAANG companies. Using the top four headlines per day, sentiment scores were calculated and averaged to 
+represent overall market sentiment. The marks in these graphs are scatter points, with the top graph displaying the complete dataset and 
+the bottom graph providing a filtered view based on user interactions. The channels used include the x-axis for percentage change in stock 
+prices and the y-axis for average sentiment scores. Color differentiates companies, while interactivity allows users to filter data by 
+selecting specific areas on the top graph, choosing companies via the legend, and selecting years using buttons. 
+    Scatter plots were chosen to represent this data because they effectively visualize the relationship between two continuous variables while 
+allowing the identification of trends, clusters, and outliers. The interactivity enhances usability, offering exploration of data subsets 
+and revealing patterns that might not be apparent in the full dataset.
+    Key insights from this analysis reveal a clear clustering around neutral sentiment and minimal price changes, reflecting the market's 
+stability on most days. However, extreme positive or negative price changes are associated with a wider spread in sentiment scores, 
+indicating that significant market movements often correlate with polarized news headlines. Company-level analysis highlights distinct 
+sentiment and stock price patterns; for example, Netflix shows more pronounced shifts in later years compared to more established companies 
+like Apple and Microsoft. Year-specific analysis sheds light on trends during critical events, such as the 2008 financial crisis, which 
+drove extreme sentiment and stock price movements across all companies.
+    Overall, this analysis underscores the impact of financial news on stock performance, providing an in-depth view of market dynamics. The 
+interactivity of the graphs, combined with the detailed breakdown of sentiment scores, makes this visualization an effective tool for 
+understanding investor behavior and predicting market responses to news events. 
+
+Annual Trends in Search Query Categories and Their Similarity to Market Terms 
+    This bar chart visualizes the annual trends of top Google search query categories and their similarity scores compared to market-related 
+terms between 2006 and 2013. The marks in this visualization are vertical bars, with the x-axis representing different search categories 
+such as "It's the Economy," "Stocks," and "Google News Searches," and the y-axis displaying similarity scores, which range from 0 (no 
+similarity) to 1 (full similarity). The color of the bars represents the year, enabling the viewer to track temporal changes in search 
+trends. The height of the bars indicates the strength of alignment between the search query categories and market-related terms, with 
+taller bars reflecting higher similarity.
+    A bar chart was chosen for this data because it effectively compares categorical data across multiple years, highlighting shifts in search 
+trends over time. The color-coding of years enhances the chart’s readability, while the straightforward alignment of categories and 
+similarity scores allows for a focused evaluation of how societal priorities relate to financial markets.
+    Key insights from this chart include notable spikes in similarity scores for categories such as "It's the Economy," "Economy," and "Stocks" 
+during pivotal years like 2008, 2011, and 2012. These spikes correspond to major economic events, including the global financial crisis, 
+the U.S. debt ceiling crisis, and the Eurozone debt crisis, underscoring heightened public interest in financial markets during times of 
+instability. On the other hand, categories like "Google News Searches" and "Technology" display moderate alignment, reflecting Google's 
+important role in disseminating financial and technological information.
+    This chart effectively communicates the evolving relationship between public interest and economic conditions, demonstrating how search
+trends reflect societal priorities during periods of economic uncertainty. By leveraging the simplicity of a bar chart to showcase 
+categorical and temporal comparisons, this visualization provides valuable insights into how public welfare and financial market concerns 
+intersect over time.
+
+Trading Volumes vs. GDP Growth Rate Correlation
+    This heatmap explores correlations between trading volumes of the MAANG companies and GDP growth rate for the United States. The marks 
+in the visualization are square tiles which represent the organizational correlation between two variables. The channel here is color, 
+which represents strength and direction of the correlation. Red indicates positive correlation and blue indicates negative, with both 
+getting darker as the correlations get closer to 1 and -1 respectively. The position of each tile aligns with the variables on the x and 
+y-axis. Numeric labels offer additional clarity about precise correlation values.
+    We chose to represent this data using a correlation heatmap because it effectively communicates the relationships between multiple variables. 
+This visualization is efficient and compact for conveying correlation information, which suits our goals for analysis well. By further 
+adding labels for exact correlation values, this heatmap becomes an interpretable visualization to show relationships and patterns in our 
+data.
+    Key insights show a strong positive correlation between Apple and Google volumes (0.90) and Microsoft and Google volumes (0.74), indicating 
+synchronized trading activity among these companies and showcasing shared market trends. Conversely, Netflix trading volume shows negative 
+correlations with Apple (-0.58), Amazon (-0.63), and Microsoft (-0.40), suggesting that Netflix's trading activity may respond to differing 
+market forces compared to other tech firms. The GDP growth rate exhibits negative correlations with Apple (-0.49), Microsoft (-0.33), and 
+Netflix volumes (-0.66), meaning that the higher economic growth may be associated with reduced trading activity in these companies and 
+possibly reflecting shifts in investor focus from active trading during stable economic periods. Meanwhile, Google volume shows a slight 
+positive correlation (0.29) with GDP growth, contrasting with the others.
+    Overall, this heatmap effectively visualizes the degrees of correlation across trading volumes and GDP growth, offering insights into market 
+dynamics and company-specific trends.
+
+Stock Price Highs and Lows vs. GDP Growth Rate Correlation
+    This graph is the complementary visualization to the previous heatmap. It has been divided into two subplots to allow for greater clarity 
+of variables and easier, targeted analysis. This heatmap examines the correlations between the high and low stock prices of major tech 
+companies and GDP growth rate. Here, the marks and channels are the same as the previous heatmap as both visualizations follow the same 
+structure, but differ due to the inclusion of two MAANG stock variables compared to the previous singular variable. 
+    To reiterate, a heatmap is ideal for this data because it effectively visualizes the relationships among multiple variables while 
+highlighting patterns and differences. By leveraging color intensity and numeric values, it enables viewers to quickly identify significant 
+correlations and compare trends across companies and metrics. Especially with more variables being compared in this heatmap, we needed to 
+ensure our data would be represented as clearly as possible without unnecessary confusion added.
+    Key insights start with strong positive correlations being evident between Apple and Amazon stock prices, both in highs (0.94) and 
+lows (0.95), reflecting their similar market trends. Google’s high and low prices also correlate strongly with Amazon (0.78 and 0.76, 
+respectively) and Apple (0.75 and 0.76), highlighting consistent relationships across these companies. Netflix’s high prices show weaker 
+correlations and a slight negative correlation with Microsoft low prices (-0.11), suggesting non-correlative price movement dynamics. 
+GDP growth rate shows moderate positive correlations with Google’s stock highs (0.55) and Microsoft highs (0.54), suggesting some alignment 
+between economic growth and stock performance.
+    This heatmap effectively captures the connection of stock price movements among the tech companies while highlighting unique patterns, 
+such as Netflix’s divergence. It provides a clear and comprehensive overview of how these variables relate to each other and the broader 
+economic context they operate in.
